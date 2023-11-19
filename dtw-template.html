@@ -1,0 +1,146 @@
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&family=Roboto:wght@700&display=swap');
+    
+    .dtw { 
+      display: block; 
+      margin: 0 auto; 
+      background-color: transparent;
+      color: #404040; 
+      font-family: 'Open Sans', sans-serif; 
+      font-size: 36px; 
+      width: 1000px;
+      background-image: url('./metal-1000.jpg');
+    }
+    
+    .dtw p                   { margin: 0; text-align: center; color: #303030; font-weight: bold; }
+    .dtw [class*=engrave]    { text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.8), 1px 1px 0px rgba(255, 255, 255, 0.3); }
+    .dtw [class*=flex]       { display: flex; }
+    .dtw [class*=row]        { flex-direction: row; justify-content: space-evenly; }
+    .dtw [class*=col]        { flex-direction: column; }
+    .dtw [class*=ai-center]  { align-items: center; }
+    .dtw [class*=as-center]  { align-self: center; }
+    .dtw [class*=gap]        { gap: 10px; }
+    
+    .dtw [class*=js-center]  { justify-self: center; }
+    .dtw [class*=js-right]   { justify-self: right; }
+    .dtw [class*=jc-center]  { justify-content: center; }
+    
+    .dtw [class*=none]       { display: none; }
+
+    .dtw [class*=s36]        { width: 36px; height: 36px; padding-right: 10px; }
+    .dtw [class*=w800]       { width: 800px; }
+    .dtw [class*=w1000]      { width: 1000px; }
+
+    .dtw [class*=ptopM]      { padding-top: 30px;}
+    .dtw [class*=pbotM]      { padding-bottom: 15px;}
+    .dtw [class*=pbotL]      { padding-bottom: 30px;}
+
+    .dtw [class*=cHigh]      { color: #202020; text-shadow: 2px 2px 3px darkslategray }
+
+    .dtw [class*=roboto]     { font-family: Roboto; }
+    .dtw [class*=bold]       { font-weight: 700; }
+    .dtw [class*=fsizeXL]    { font-size: 48px; }
+    .dtw [class*=fsizeL]     { font-size: 36px; }
+    .dtw [class*=fsizeM]     { font-size: 30px; }
+    .dtw [class*=fsizeS]     { font-size: 20px; }
+    .dtw [class*=fsizeXS]    { font-size: 12px; }
+
+    .dtw [class*=button]     { color: white; background-color: rgb(255, 0, 0); text-decoration: none; padding-top: 5px; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; font-weight: 900; }
+    .dtw a:link              { color: white; }
+    .dtw a:visited           { color: white; }
+    .dtw a:hover             { color: white; text-shadow: 2px 2px 5px black;}
+    .dtw shadow              { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+ 
+    .dtw table               { border-collapse: collapse; font-size: 36px; }
+    .dtw table               { border: none; }
+    .dtw td                  { padding: 8px; text-align: left; vertical-align: middle; }
+    .dtw td:last-child       { padding: 8px; text-align: right; }
+  </style>
+
+<div class="dtw">
+  <div class="flex col engrave">
+    <!-- header -->
+    <div class="flex col ai-center jc-center pbotL ptopM" style="width: 1000px; ">
+      <img src="./DTW-Logo-Transparent.png" alt="dtw logo" style="width: 100px; height:100px;">
+      <p class="bold roboto">Deliver The World</p>
+    </div>
+    <div class="flex row as-center ai-center pbotM">
+      <img src="./png/008-airplane.png" class="s36" alt="airplane">
+      <p>#aircraft#</p>
+    </div>
+    <div class="flex row">
+      <div style="width: 50%;">
+        <p><img src="./png/009-departures.png" class="s36" alt="departure"></p>
+        <p class="fsizeL bold">ABCD</p>
+        <p class="fsizeS">Long departure name</p>
+        <p><img src="./png/010-arrivals.png" class="s36" alt="arrival"></p>
+        <p class="fsizeL bold">UVWX</p>
+        <p class="fsizeS">Long arrival name</p>
+      </div>
+      <div class="flex col ai-center fsizeM" style="width: 50%;">
+        <table class="fsizeS bold engrave">
+          <tr>
+              <td><img src="./png/006-cargo.png" class="s36" alt="cargo amount"></td>
+              <td>Cargo</td>
+              <td>#pay#</td>
+          </tr>
+          <tr>
+              <td><img src="./png/004-payment.png" class="s36" alt="payment"></td>
+              <td>Payment</td>
+              <td>#pay#</td>
+          </tr>
+          <tr>
+              <td><img src="./png/005-flight-route.png" class="s36" alt="distance"></td>
+              <td>Distance</td>
+              <td>#miles#</td>
+          </tr>
+          <tr>
+              <td><img src="./png/007-gas-station.png" class="s36" alt="fuel amount"></td>
+              <td>Fuel on board</td>
+              <td>#fuellOB#</td>
+          </tr>
+          <tr>
+              <td colspan="3" style="text-align: center;">
+                <a class="buttons fsizeS" href="https://www.simbrief.com/system/dispatch.php?airline=#airline#&fltnum=320&orig=#departureICAO#&dest=#arrivalICAO#&pax=#totalPax#&cargo=#cargo#" target="_blank">SIMBRIEF...</a>
+              </td>
+          </tr>
+        </table>
+        <!--
+        <p><img src="./png/006-cargo.png" class="s36" alt="cargo amount"> Cargo</p>
+        <p><img src="./png/004-payment.png" class="s36" alt="payment"> Payment</p>
+        <p><img src="./png/005-flight-route.png" class="s36" alt="distance"> Distance</p>
+        <p><img src="./png/007-gas-station.png" class="s36" alt="fuel amount"> Fuel on board</p>
+        <p style="padding: 10px 0px;">
+          <a class="buttons fsizeS" href="https://www.simbrief.com/system/dispatch.php?airline=#airline#&fltnum=320&orig=#departureICAO#&dest=#arrivalICAO#&pax=#totalPax#&cargo=#cargo#" target="_blank">SIMBRIEF...</a>
+        </p>
+        -->
+      </div>
+    </div>
+    <!-- contact -->
+    <div class="flex row">
+      <p class="fsizeS ptopM">
+          Contact <span class="bold cHigh"> #contact# </span>
+          via FTW-Mail, Forum or Discord if you have questions.<br>
+      </p>
+    </div> 
+    <!-- footer -->
+    <div class="flex col ai-center ptopM pbotL">
+      <p class="roboto bold fsizeXL">Deliver The World</p>
+      <div class="fsizeS">
+        <p>We are a cargo-only airline on FTW</p>
+        <p>We're searching for new Pilots to transport cargo for our customers.</p>
+        <p class="ptopM">Join us on Discord!</p>
+      </div>
+      <div class="ptopM">
+        <a class="button fsizeS shadow" href="https://discord.gg/kyQPM48Rge" target="_blank">DISCORD</a>
+      </div>
+    </div>
+    <div>
+      <div class="fsizeXS">
+        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>  
+      </div>
+    </div>
+  </div>
+</div>
+  
